@@ -1,6 +1,6 @@
 body{
     height: 100vh;
-    background: url('gym.jpg') no-repeat center center fixed;
+    background: url('lgImg/gym.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     text-align: center;
@@ -10,16 +10,16 @@ h2{
     font-family: sans-serif;
 }
 .login{
-    background: rgba(0, 0, 0, 0.6);;
-    backdrop-filter: blur(8px);;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-color: white;
-border-radius: 5px;
-width: 300px;
-height: 300px;
-text-align: center;
-align-items: center;
-margin: auto;
+    color: white;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    align-items: center;
+    margin: auto;
 }
 input{
     width: 200px;
