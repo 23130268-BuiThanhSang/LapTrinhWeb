@@ -8,7 +8,6 @@ let autoSlide = setInterval(nextSlide, 5000);
 function showSlide() {
     slides.style.transform = `translateX(-${index * bannerWidth}px)`;
 }
-
 function nextSlide() {
     index = (index + 1) % total;
     showSlide();
