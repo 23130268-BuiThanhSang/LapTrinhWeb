@@ -74,12 +74,27 @@ button{
     height: 40px;
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding-top:10px;
+    padding-bottom: 10px;
     background-color: #001A2D;
     color: white;
     font-weight: bold;
     font-size: 20px;
 
+}
+
+.NewProduct,
+.ListProduct,
+.Brand,
+.Sale{
+    height:60px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 5px;
 }
 .Logo{
     height: 50px;
@@ -87,9 +102,10 @@ button{
 }
 .NameWebsite{
     color:deepskyblue;
-    margin-right: 50px;
+    margin-right: 55px;
 }
 .NewProduct{
+
     margin-right: 25px;
 }
 .ListProduct{
@@ -117,8 +133,8 @@ button{
 
 }
 .NewProduct:hover{
-    background-color: White;
     color: deepskyblue;
+    background-color:white;
 }
 .ListProduct:hover{
     background-color: White;
