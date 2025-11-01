@@ -101,6 +101,7 @@ h2{
 /*MAIN MENU BAR*/
 .MainMenuBar {
     height: 40px;
+    width: 100%;
     display: flex;
     align-items: center;
     padding-top:10px;
@@ -111,72 +112,148 @@ h2{
     font-size: 20px;
 
 }
-
-.NewProduct,
-.ListProduct,
-.Brand,
-.Sale{
-    height:60px;
-    width: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: 0.2s;
-    border-radius: 5px;
-}
 .Logo{
-    height: 50px;
-    width: 50px;
+    width:50px;
+    height:50px;
 }
 .NameWebsite{
+    color: deepskyblue;
+    font-weight: bold;
+    font-size: 20px;
+}
+.SearchBox {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    height: 25px;
+    width: 230px;
+    padding: 0 10px;
+    transition: background 0.3s ease;
+}.SearchBox:hover {
+     background: rgba(255, 255, 255, 0.25);
+ }
+
+.SearchBox i {
+    color: rgba(255,255,255,0.8);
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.SearchBar {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    margin: 0;
+}
+
+.SearchBar::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.GroupLeft{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    margin-right: 75px;
+}
+.GroupCenter{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    font-size: 17px;
+    margin-right: 470px;
+}
+.GroupCenter>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height:60px;
+    width:115px;
+    border-radius:3px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+}
+.GroupCenter>div:hover{
+    background-color: lightgray;
+    cursor: pointer;
     color:deepskyblue;
-    margin-right: 55px;
 }
-.NewProduct{
+.MegaBoxNewProduct,.MegaBoxListProduct,.MegaBoxBrand,.MegaBoxSale{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:900px;
+    height:300px;
+    background-color:  rgba(255,255,255,0.95);
+    color:black;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display:none;
+    padding: 10px;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
 
-    margin-right: 25px;
 }
-.ListProduct{
-    margin-right: 25px;
-}
-.Brand{
-    margin-right: 25px;
-}
-.Sale{
-    margin-right: 630px;
+.GroupCenter > .NewProduct:hover .MegaBoxNewProduct,
+.GroupCenter > .ListProduct:hover .MegaBoxListProduct,
+.GroupCenter > .Brand:hover .MegaBoxBrand,
+.GroupCenter > .Sale:hover .MegaBoxSale {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.SearchBar{
-    margin-top: 10px;
-    background: rgba(255, 255, 255, 0.2);
-    height: 20px;
-    width:150px;
+
+.Column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-.User{
+
+.Column h4 {
+    color: black;
+    font-size: 16px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    padding-bottom: 4px;
+}
+
+.Column div {
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.Column div:hover {
+    color: deepskyblue;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translate(-50%, -10px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
+.GroupRight{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+
+}
+.GroupRight>div{
+    height:100%;
     margin-right: 20px;
-    margin-left: 25px;
 }
-.ShoppingCart{
-    margin-right: 20px;
 
-}
-.NewProduct:hover{
-    color: deepskyblue;
-    background-color:white;
-}
-.ListProduct:hover{
-    background-color: White;
-    color: deepskyblue;
-}
-.Brand:hover{
-    color: deepskyblue;
-    background-color:White;
-}
-.Sale:hover{
-    color: deepskyblue;
-    background-color:White;
-}
 
 /*MAIN BANNER*/
 .banner {
